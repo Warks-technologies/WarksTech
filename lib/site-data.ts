@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { Code2, ShieldCheck, Sparkles, Laptop2, Brain, LockKeyhole, Users, Rocket } from 'lucide-react';
+import { Briefcase, CalendarDays, Code2, Laptop2, ShieldCheck, Sparkles, Brain, LockKeyhole, Users, Rocket, Zap } from 'lucide-react';
 
 export type Program = {
   title: string;
@@ -7,6 +7,13 @@ export type Program = {
   duration: string;
   skills: string[];
   icon: LucideIcon;
+};
+
+export type FeatureCard = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  accent: string;
 };
 
 export const navLinks = [
@@ -41,6 +48,40 @@ export const benefits = [
     icon: Sparkles
   }
 ];
+
+export const whyChooseCards: FeatureCard[] = [
+  {
+    title: 'Structured Project-Based Learning',
+    description:
+      'Every Warks cohort is organized around curated assignments and guided tasks so students build real skills through practice, not passive watching.',
+    icon: Zap,
+    accent: 'linear-gradient(135deg, rgba(254, 215, 170, 0.85), rgba(251, 146, 60, 0.35))'
+  },
+  {
+    title: 'Flexible Learning Schedule',
+    description:
+      'Learn at a pace that works alongside college, work, or personal commitments with a schedule designed for consistency and progress.',
+    icon: CalendarDays,
+    accent: 'linear-gradient(135deg, rgba(199, 210, 254, 0.85), rgba(186, 230, 253, 0.4))'
+  },
+  {
+    title: 'Verified Certificates',
+    description:
+      'Complete the required work and receive a certificate with a unique verification ID to show your progress and achievement.',
+    icon: ShieldCheck,
+    accent: 'linear-gradient(135deg, rgba(167, 243, 208, 0.85), rgba(134, 239, 172, 0.35))'
+  },
+  {
+    title: 'Real Portfolio Projects',
+    description:
+      'Choose from practical projects built to reflect real development tasks and leave you with work you can actually present.',
+    icon: Briefcase,
+    accent: 'linear-gradient(135deg, rgba(216, 180, 254, 0.8), rgba(244, 114, 182, 0.45))'
+  }
+];
+
+export const whyChooseQuote =
+  'Our programs focus on practical execution — you do not just learn concepts, you prove your skills through completed assignments.';
 
 export const programs: Program[] = [
   {

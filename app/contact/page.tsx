@@ -35,7 +35,7 @@ export default function ContactPage() {
               <MessageSquare className="mt-1 h-5 w-5 text-navy-700 dark:text-navy-100" />
               <div>
                 <div className="font-semibold text-slate-950 dark:text-white">Response time</div>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Usually within 24 to 48 hours</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">Less than 24 hours</p>
               </div>
             </div>
           </div>
@@ -46,15 +46,15 @@ export default function ContactPage() {
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 p-4 dark:border-white/10">
               <div className="text-sm font-semibold text-slate-950 dark:text-white">Programs</div>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Web Dev, AI, Cybersecurity</p>
+              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Web Dev, AI/ML, Cybersecurity</p>
             </div>
             <div className="rounded-2xl border border-slate-200 p-4 dark:border-white/10">
               <div className="text-sm font-semibold text-slate-950 dark:text-white">Format</div>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Static website, application-led</p>
+              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Application-led</p>
             </div>
             <div className="rounded-2xl border border-slate-200 p-4 dark:border-white/10">
               <div className="text-sm font-semibold text-slate-950 dark:text-white">Duration</div>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">4 weeks per cohort</p>
+              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">4 weeks per cohort or depends</p>
             </div>
             <div className="rounded-2xl border border-slate-200 p-4 dark:border-white/10">
               <div className="text-sm font-semibold text-slate-950 dark:text-white">Status</div>

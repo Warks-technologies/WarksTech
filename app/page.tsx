@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
-import { benefits, programs } from '@/lib/site-data';
+import { programs, whyChooseCards, whyChooseQuote } from '@/lib/site-data';
 import { Hero } from '@/components/Hero';
 import { ProgramCard } from '@/components/ProgramCard';
 
@@ -10,25 +10,40 @@ export default function HomePage() {
       <Hero />
 
       <section className="container-page py-8 sm:py-16">
-        <div className="mb-8 max-w-2xl">
-          <h2 className="section-title">Why choose Warks</h2>
-          <p className="section-copy mt-3">A clean, focused experience designed to help students start building with confidence.</p>
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+            Why Choose <span className="text-navy-600 dark:text-navy-300">Warks?</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Practical learning, guided support, and portfolio-ready outcomes for students who want to build real skills.
+          </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {benefits.map((benefit) => {
-            const Icon = benefit.icon;
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {whyChooseCards.map((card) => {
+            const Icon = card.icon;
             return (
-              <div key={benefit.title} className="glass-panel rounded-3xl p-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-navy-950 text-white dark:bg-white/10">
-                  <Icon className="h-5 w-5" />
+              <article key={card.title} className="glass-panel relative overflow-hidden rounded-3xl p-6">
+                <div
+                  aria-hidden="true"
+                  className="absolute -right-10 -top-10 h-32 w-32 rounded-full blur-2xl"
+                  style={{ background: card.accent }}
+                />
+                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-navy-950 text-white shadow-soft dark:bg-white/10">
+                  <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-slate-950 dark:text-white">{benefit.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{benefit.description}</p>
-              </div>
+                <h3 className="relative mt-6 text-2xl font-semibold tracking-tight text-slate-950 dark:text-white">
+                  {card.title}
+                </h3>
+                <p className="relative mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">{card.description}</p>
+              </article>
             );
           })}
         </div>
+
+        <p className="mx-auto mt-16 max-w-4xl text-center text-base italic leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
+          {whyChooseQuote}
+        </p>
       </section>
 
       <section className="bg-slate-50/80 py-16 dark:bg-white/5">
