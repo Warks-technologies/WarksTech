@@ -25,17 +25,17 @@ export function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/apply"
+              href="/programs"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-navy-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy-800"
             >
-              Apply Now
+              Explore Programs
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/programs"
               className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-navy-300 hover:text-navy-700 dark:border-white/15 dark:text-slate-200"
             >
-              Explore Programs
+              View details
             </Link>
           </div>
 

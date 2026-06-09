@@ -1,12 +1,17 @@
 import type { LucideIcon } from 'lucide-react';
-import { Briefcase, CalendarDays, Code2, Laptop2, ShieldCheck, Sparkles, Brain, LockKeyhole, Users, Rocket, Zap } from 'lucide-react';
+import { Briefcase, CalendarDays, Code2, ShieldCheck, Sparkles, Brain, LockKeyhole, Users, Rocket, Zap } from 'lucide-react';
+
+export type ProgramIconName = 'Laptop2' | 'Brain' | 'LockKeyhole' | 'ShieldCheck';
 
 export type Program = {
   title: string;
   description: string;
   duration: string;
   skills: string[];
-  icon: LucideIcon;
+  iconName: ProgramIconName;
+  applicationStatus: 'open' | 'closed';
+  applyUrl?: string;
+  applyLabel?: string;
 };
 
 export type FeatureCard = {
@@ -20,7 +25,6 @@ export const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/programs', label: 'Programs' },
-  { href: '/apply', label: 'Apply' },
   { href: '/contact', label: 'Contact' }
 ];
 
@@ -90,7 +94,8 @@ export const programs: Program[] = [
       'Learn how modern websites are planned, built, and shipped with a real-world workflow. By the end, you will have a polished project you can show in your portfolio.',
     duration: '4 weeks',
     skills: ['HTML, CSS, and JavaScript', 'Responsive UI building', 'Git and deployment basics', 'Project structure and teamwork'],
-    icon: Laptop2
+    iconName: 'Laptop2',
+    applicationStatus: 'closed'
   },
   {
     title: 'AI Foundations',
@@ -98,7 +103,8 @@ export const programs: Program[] = [
       'Get started with practical AI concepts through simple, hands-on builds. You will understand how to use AI tools responsibly and effectively in projects.',
     duration: '4 weeks',
     skills: ['Prompting basics', 'AI workflow design', 'Model usage concepts', 'Practical automation ideas'],
-    icon: Brain
+    iconName: 'Brain',
+    applicationStatus: 'closed'
   },
   {
     title: 'Cybersecurity Basics',
@@ -106,7 +112,19 @@ export const programs: Program[] = [
       'Explore the core ideas behind staying safe online and securing digital systems. The program focuses on awareness, prevention, and safe practices.',
     duration: '4 weeks',
     skills: ['Security fundamentals', 'Threat awareness', 'Password and access hygiene', 'Safe browsing practices'],
-    icon: LockKeyhole
+    iconName: 'LockKeyhole',
+    applicationStatus: 'closed'
+  },
+  {
+    title: 'Cybersecurity Foundations Internship',
+    description:
+      'A 3-week structured program that helps beginners understand how modern systems are secured, how vulnerabilities appear, and how attackers think through practical labs and a final mini project.',
+    duration: '3 weeks',
+    skills: ['Security labs and guided tasks', 'Vulnerability discovery basics', 'Attacker mindset analysis', 'Final mini project'],
+    iconName: 'ShieldCheck',
+    applicationStatus: 'open',
+    applyUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSf04AzCUxONAEM7Jh_ANlR0mN4mqdcQc4z64bJ-IzWqqsClSA/viewform?usp=header',
+    applyLabel: 'Apply for internship'
   }
 ];
 

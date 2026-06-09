@@ -1,5 +1,5 @@
 import { programs } from '@/lib/site-data';
-import { ProgramCard } from '@/components/ProgramCard';
+import { ProgramsCatalog } from '@/components/ProgramsCatalog';
 
 export default function ProgramsPage() {
   return (
@@ -7,15 +7,11 @@ export default function ProgramsPage() {
       <div className="max-w-3xl">
         <h1 className="text-4xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-5xl">Programs</h1>
         <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-          Every Warks program runs for four weeks and focuses on practical, portfolio-friendly learning.
+          Warks programs are short, focused cohorts built around practical, portfolio-friendly learning.
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-3">
-        {programs.map((program) => (
-          <ProgramCard key={program.title} program={program} />
-        ))}
-      </div>
+      <ProgramsCatalog programs={programs} />
     </div>
   );
 }
